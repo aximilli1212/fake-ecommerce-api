@@ -1,5 +1,5 @@
 models:
-  Post:
+  Product:
     hasMany: [Comment]
     fake:
       _count: 10
@@ -12,7 +12,7 @@ models:
       createdAt: dateTime
  
   Comment:
-    belongsTo: [Post]
+    belongsTo: [Product]
     fake:
       _count: 25
       email: email
