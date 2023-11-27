@@ -5,7 +5,9 @@ models:
       _count: 10
       cover: { imageURL: [1920, 1080] }
       title: { loremWords: [3, 10] }
-      body: loremParagraphs
+      price: { float: [ 5, 100 ] precision: 0.01 }
+      imageUrl: { imageURL: [ 300, 300 ] }
+      description: { loremParagraphs: [ 1, 4 ] }
       category: { stringOf: [one, two, three] }
       isDraft: { bool: 90 }
       views: { int: [0, 1000] }
