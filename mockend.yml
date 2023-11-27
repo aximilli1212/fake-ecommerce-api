@@ -1,14 +1,19 @@
 models:
   Product:
+    hasMany: [Comment]
     fake:
-      title: { loremWords: [2, 5] }
-      supplier: { company: 1 }
-      price: { float: [5, 100] precision: 0.01 }
-      imageUrl: { imageURL: [300, 300] }
-      description: { loremParagraphs: [1, 4] }
-      product_location:
-        string: [
-          "Warehouse A",
-          "Warehouse B",
-          "Warehouse C"
-        ]
+      _count: 10
+      cover: { imageURL: [1920, 1080] }
+      title: { loremWords: [5, 20] }
+      price: { float: [ 5, 100 ] precision: 0.01 }
+      imageUrl: { imageURL: [ 300, 300 ] }
+      description: { loremParagraphs: [ 1, 4 ] }
+      views: { int: [0, 1000] }
+      createdAt: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
+  Comment:
+    belongsTo: [Post]
+    fake:
+      _count: 25
+      email: email
+      body: { loremParagraphs: [10, 100] }
+      createdAt: { dateTime: [2010-01-01T00:00:00Z, 2020-12-31T23:59:59Z] }
