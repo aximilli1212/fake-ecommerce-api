@@ -6,7 +6,7 @@ models:
       cover: { imageURL: [1920, 1080] }
       title: { loremWords: [3, 10] }
       imageUrl: { imageURL: [ 300, 300 ] }
-      description: { loremParagraphs: [ 1, 4 ] }
+      description: { loremParagraphs: [ 4, 6 ] }
       category: { stringOf: [one, two, three] }
       isDraft: { bool: 90 }
       price: { int: [0, 1000] }
