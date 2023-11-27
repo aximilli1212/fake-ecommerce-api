@@ -2,7 +2,7 @@ models:
   Product:
     hasMany: [Comment]
     fake:
-      _count: 10
+      _count: 25
       cover: { imageURL: [1920, 1080] }
       title: { loremWords: [3, 10] }
       imageUrl: { imageURL: [ 300, 300 ] }
