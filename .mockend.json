@@ -1,76 +1,39 @@
 {
-  "Post": {
-    "_": {
-      "items": 10,
-      "data": [
-        {
-          "title": "First title",
-          "body": "You can use your own data or have random values generated for you."
-        },
-        {
-          "title": "Second title",
-          "body": "The rest of the posts will have random values"
-        }
-      ]
+  "Product": [
+    {
+      "id": "1",
+      "title": "dolor sit magna sed dolore",
+      "price": 47.23,
+      "imageUrl": "https://loremflickr.com/300/300",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate lacus ut massa efficitur, sed imperdiet dui placerat. Quisque at.",
+      "views": 562,
+      "createdAt": "2016-02-06T14:19:34Z"
     },
-    "cover": {
-      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/270"
-    },
-    "title": {
-      "loremWords": {
-        "minLength": 5,
-        "maxLength": 20
-      }
-    },
-    "body": {
-      "loremParagraphs": {
-        "minLength": 10,
-        "maxLength": 100
-      }
-    },
-    "category": {
-      "string": ["one", "two", "three"]
-    },
-    "isDraft": {
-      "boolean": {}
-    },
-    "views": {
-      "int": {
-        "min": 0,
-        "max": 1000
-      }
-    },
-    "createdAt": {
-      "dateTime": {
-        "min": "2010-01-01T00:00:00Z",
-        "max": "2020-12-31T23:59:59Z"
-      }
-    },
-    "comments": {
-      "hasMany": "Comment"
+    {
+      "id": "2",
+      "title": "amet consectetur quis",
+      "price": 55.93,
+      "imageUrl": "https://loremflickr.com/300/300",
+      "description": "Cras molestie pellentesque quam, ut vestibulum mi mollis vel. Sed ac arcu sagittis, malesuada purus vel, iaculis mauris.",
+      "views": 235,
+      "createdAt": "2013-01-17T08:45:15Z"
     }
-  },
-  "Comment": {
-    "_": {
-      "items": 25
+  ],
+
+  "Comment": [
+    {
+      "id": "1",
+      "email": "JohnDoe@example.com",
+      "body": "Sed sagittis sit amet nisl sed sollicitudin...",
+      "createdAt": "2012-06-12T11:58:14Z",
+      "productId": "1"
     },
-    "email": {
-      "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
-    },
-    "body": {
-      "loremParagraphs": {
-        "minLength": 10,
-        "maxLength": 100
-      }
-    },
-    "createdAt": {
-      "dateTime": {
-        "min": "2010-01-01T00:00:00Z",
-        "max": "2020-12-31T23:59:59Z"
-      }
-    },
-    "post": {
-      "belongsTo": "Post"
+    {
+      "id": "2",
+      "email": "JaneSmith@example.org",
+      "body": "Praesent placerat eros eget nisl rutrum...",
+      "createdAt": "2015-03-21T09:15:03Z",
+      "productId": "2"
     }
-  }
+  ]
 }
